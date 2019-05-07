@@ -1,2 +1,4 @@
 # test-parcel
-Test parcel
+Test parcel project
+
+## using jQuery, /*SCSS*/, Parcel

@@ -1,0 +1,114 @@
+/*-----------------------------------------------------------------------------
+
+version:   1.0
+date:      02/15/17
+author:    hwangmari
+email:     hwangmari@29cm.co.kr
+
+website:
+
+version history: 1.0 - Make css for template app
+-----------------------------------------------------------------------------*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video,
+input, textarea, button, select{
+	margin: 0;
+	padding: 0;
+}
+
+ol, ul, li {
+	list-style: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+img{
+	border: 0;
+	vertical-align: top;
+}
+
+em, address{
+	font-style:normal
+}
+
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
+	display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+input::-ms-clear{
+	display:none;
+}
+
+@font-face{
+    font-family: "campton";
+    font-weight: 100;
+    src: local("Campton W00 Thin"), local("Campton-W00-Thin"), url("https://img.29cm.co.kr/fonts/campton/b6517a55-91d1-4fd5-accc-bbc44c2a1268.woff") format("woff");
+}
+@font-face{
+    font-family: "campton";
+    font-weight: 200;
+    src: local("Campton W00 ExtraLight"), local("Campton-W00-ExtraLight"), url("https://img.29cm.co.kr/fonts/campton/37009395-1130-4922-9b9a-c93c29f9b42a.woff") format("woff");
+}
+@font-face{
+    font-family: "campton";
+    font-weight: 300;
+    src: local("Campton W00 Light"), local("Campton-W00-Light"), url("https://img.29cm.co.kr/fonts/campton/21126dbb-43aa-4675-a8ab-dce7f5e374ce.woff") format("woff");
+}
+@font-face{
+    font-family: "campton";
+    font-weight: 400;
+    src: local("Campton W00 Book"), local("Campton-W00-Book"), url("https://img.29cm.co.kr/fonts/campton/f4a8087d-b3f5-4f7a-83ec-4717e0d529ad.woff") format("woff");
+}
+@font-face{
+    font-family: "campton";
+    font-weight: 500;
+    src: local("Campton W00 Medium"), local("Campton-W00-Medium"), url("https://img.29cm.co.kr/fonts/campton/ca3a70c8-d6a1-46d3-997c-4a26498eefa9.woff") format("woff");
+}
+@font-face{
+    font-family: "campton";
+    font-weight: 600;
+    src: local("Campton W00 SemiBold"), local("Campton-W00-SemiBold"), url("https://img.29cm.co.kr/fonts/campton/5ee11613-bc94-479b-bf86-5b2b6a68f55d.woff") format("woff");
+}
+@font-face{
+    font-family: "campton";
+    font-weight: 700;
+    src: local("Campton W00 Bold"), local("Campton-W00-Bold"), url("https://img.29cm.co.kr/fonts/campton/d01b7dbc-e431-40e4-a193-e4050a6b945d.woff") format("woff");
+}
+@font-face{
+    font-family: "campton";
+    font-weight: 800;
+    src: local("Campton W00 ExtraBold"), local("Campton-W00-ExtraBold"), url("https://img.29cm.co.kr/fonts/campton/3c965a6b-54fa-4259-9907-2c3fdd955bc4.woff") format("woff");
+}
+@font-face{
+    font-family: "campton";
+    font-weight: 900;
+    src: local("Campton W00 Black"), local("Campton-W00-Black"), url("https://img.29cm.co.kr/fonts/campton/5ca5ef66-4367-4c90-8612-ef45818a599f.woff") format("woff");
+}
+
+body, input, select, textarea, button, a {
+	-webkit-text-size-adjust:none;
+	font-family: "campton", "Apple SD Gothic Neo", NanumBarunGothic, "나눔바른고딕", Malgun Gothic, "맑은 고딕", dotum, sans-serif;
+}

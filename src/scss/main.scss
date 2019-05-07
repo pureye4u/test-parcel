@@ -1,0 +1,435 @@
+@import 'config';
+@import 'reset';
+
+/* 달력 영역 */
+.culture_calender_wrap {
+	position: relative;
+}
+.culture_calender_wrap:before {
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 50%;
+	width: 236px;
+	height: 386px;
+	margin-left: -750px;
+	background: url('https://img.29cm.co.kr/next29cm/event/calendar/201905/month.png') 50% 50%;
+	z-index: 2;
+	content: '';
+}
+.calender_ly {
+	position: relative;
+	min-height: 540px;
+	padding: 0 0 0 25px;
+	background-position: 50% 50%;
+	background-size: cover;
+	color: #fff;
+}
+.calender_ly:after {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,.7);
+	z-index: 1;
+	content: '';
+}
+.calenderbx {
+	position: sticky;
+	max-width: 900px;
+	margin: 0 auto;
+	z-index: 200;
+}
+.calenderbx h1 {
+	padding: 50px 0 30px;
+	font-weight: 300;
+	font-size: 20px;
+	line-height: 26px;
+	letter-spacing: 2px;
+}
+.calenderbx p {
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 20px;
+}
+.calender {
+	overflow: hidden;
+	padding: 70px 0;
+	font-weight: 400;
+	color: #d8d8d8;
+}
+.calender .days {
+	height: 40px;
+	font-weight: 300;
+	color: #d4d4d4;
+}
+.calender .date {
+	height: 80px;
+	font-weight: 300;
+	font-size: 20px;
+	color: #d4d4d4;
+}
+.calender .days div {
+	float: left;
+	width: 14%;
+}
+.calender .date div {
+	position: relative;
+	float: left;
+	width: 14%;
+	cursor: pointer;
+}
+/* --[D]-- 새로운 컬쳐 시작 날짜에 N 아이콘 'new' class추가 */
+.calender .date .new:before {
+	display: block;
+	position: absolute;
+	top: 28px;
+	left: 20px;
+	color: #ffd500;
+	font-size: 14px;
+	content: 'N';
+}
+.calender .date div:after {
+	position: absolute;
+	top: 30px;
+	left: 0;
+	display: block;
+	width: 10px;
+	height: 10px;
+	background: #D8D8D7;
+	border-radius: 50%;
+	content: '';
+}
+/* --[D]-- 날짜 클릭시 색상 변경 'view' class추가 */
+.calender .date .view:after {
+	background: #ffd500;
+}
+.calender .date .empty {
+	opacity: 0;
+}
+/* 날짜별 culture 안내 영역 */
+.view_wrap {
+	padding: 40px 0 30px;
+	background: #181819;
+	font-weight: 300;
+	font-size: 13px;
+	color: #a0a0a0;
+}
+.view_ly {
+	max-width: 900px;
+	margin: 0 auto;
+}
+.view_ly span {
+	display: block;
+	position: relative;
+	padding-left: 15px;
+}
+.view_ly .view {
+	padding-bottom: 15px;
+}
+.view_ly .view:before {
+	position: absolute;
+	top: 4px;
+	left: 0;
+	display: block;
+	width: 6px;
+	height: 6px;
+	background: #D8D8D7;
+	border-radius: 50%;
+	content: '';
+}
+.view_ly .new:before {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #ffd500;
+	font-size: 9px;
+	content: 'N';
+}
+/* 구독 안내 영역 */
+.subdsc_wrap {
+	background: #f4f4f4;
+}
+.subdsc_ly {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 70px 0;
+}
+.subdsc_ly h3 {
+	font-weight: 400;
+	font-size: 32px;
+	line-height: 44px;
+}
+.info_in ul {
+	padding: 30px 0;
+}
+.info_in li:first-child {
+	padding-top: 0;
+	font-size: 18px;
+	font-weight: 500;
+}
+.info_in li {
+	padding-top: 10px;
+}
+.sub_btn {
+	position: relative;
+	display: flex;
+	align-items: center;
+	height: 104px;
+	padding: 0 40px 0 25px;
+	background: #303033;
+	font-size: 14px;
+	color: #fff;
+	cursor: pointer;
+}
+.sub_btn:before {
+	position: absolute;
+	top: auto;
+	right: 40px;
+	display: block;
+	width: 110px;
+	height: 40px;
+	border-radius: 20px;
+	background: #a0a0a0;
+	content: '';
+}
+.sub_btn:after {
+	position: absolute;
+	top: auto;
+	right: 106px;
+	display: block;
+	width: 46px;
+	height: 46px;
+	background: #fff;
+	border-radius: 50%;
+	transition: right .2s;
+	content: '';
+}
+/* --[D]-- 구독 완료 했을 때 버튼 */
+.sub_btn2:before {
+	background: #ff4700;
+}
+.sub_btn2:after {
+	right: 40px;
+}
+.info_in dl {
+	padding: 30px 0;
+	font-size: 14px;
+	line-height: 22px;
+}
+.info_in dd {
+	padding-bottom: 15px;
+}
+.event_in p {
+	padding-top: 10px;
+	line-height: 24px;
+}
+.event_in img {
+	display: block;
+	max-width: 70%;
+	margin: 25px auto 30px;
+}
+.event_in dt {
+	font-weight: 600;
+}
+.event_in dd {
+	padding-bottom: 20px;
+}
+.ent_btn {
+	position: relative;
+	display: block;
+	width: 325px;
+	height: 74px;
+	line-height: 74px;
+	margin-top: 30px;
+	padding: 0 40px 0 25px;
+	background: #303033;
+	font-size: 14px;
+	color: #fff;
+}
+.ent_btn:after {
+	display: block;
+	width: 80px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background: url('https://img.29cm.co.kr/next29cm/event/calendar/calender_btn_bg.png') no-repeat center 30px;
+	background-size: 30px;
+	content: '';
+}
+/* 컬쳐 컨텐츠 영역 */
+.culture_ly {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 70px 0;
+}
+.culture_ly .trip {
+	position: relative;
+	padding: 25px 0 8px;
+	border-bottom: 1px solid #d4d4d4;
+}
+.culture_ly .trip:before {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #00c1a5;
+	content: '';
+}
+.culture_ly .trip span:nth-child(2) {
+	float: right;
+}
+.culture_dsc h4 {
+	margin: 18px 0;
+	font-weight: 500;
+	font-size: 14px;
+}
+.culture_dsc h3 {
+	margin-bottom: 18px;
+	font-weight: 600;
+	font-size: 24px;
+}
+.culture_dsc p {
+	font-weight: 200;
+}
+.culture_slide {
+	margin: 25px 0 35px;
+}
+.culture_ly .info {
+	font-weight: 200;
+	font-size: 14px;
+}
+.culture_ly .info span {
+	display: block;
+	padding-bottom: 4px;
+}
+.culture_ly .btn_buy {
+	display: block;
+	position: relative;
+	width: 325px;
+	margin: 20px 0;
+	padding: 20px 0 20px 20px;
+	background: #000;
+	font-size: 14px;
+	font-weight: 600;
+	color: #fff;
+}
+.culture_ly .btn_buy:after {
+	display: block;
+	width: 80px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background: url('https://img.29cm.co.kr/next29cm/event/calendar/calender_btn_bg.png') no-repeat center 24px;
+	background-size: 30px;
+	content: '';
+}
+/* 컬쳐 상품 영역 */
+.shop_ly {
+	padding: 50px 0 100px;
+	background: #f4f4f4;
+}
+.shop_in {
+	max-width: 900px;
+	margin: 0 auto;
+}
+.shop_in h3 {
+	margin-bottom: 20px;
+	font-weight: 500;
+	font-size: 26px;
+	line-height: 34px;
+	letter-spacing: 2px;
+	font-style: italic;
+}
+.shop_in ul {
+	overflow: hidden;
+}
+.shop_in li {
+	float: left;
+	width: 49%;
+	height: 157px;
+	margin: 10px 0 0 1%;
+	padding: 10px;
+	border: 1px solid #e4e4e4;
+	background: #fff;
+	box-sizing: border-box;
+}
+.shop_in li a {
+	display: block;
+	position: relative;
+	padding-left: 147px;
+	color: #303033;
+}
+.shop_in li img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 135px;
+}
+.shop_in .txt span {
+	font-size: 14px;
+	color: #303033;
+}
+.shop_in .txt strong {
+	display: block;
+	line-height: 22px;
+	margin: 6px 0 12px;
+}
+.shop_in .txt p {
+	font-size: 14px;
+}
+@media screen and (max-width: 540px) {
+	.subdsc_wrap {
+		padding: 0 25px;
+	}
+	.subdsc_ly {
+		padding: 30px 0;
+	}
+	.subdsc_ly h3 {
+		font-size: 26px;
+		line-height: 32px;
+	}
+	.sub_btn {
+		margin: 0 -25px;
+	}
+	.culture_ly {
+		padding: 30px 25px;
+	}
+	.culture_ly .btn_buy {
+		width: auto;
+	}
+	.shop_ly {
+		padding: 50px 25px;
+	}
+	.shop_in li {
+		float: none;
+		width: 100%;
+	}
+}
+/* 배경 변화 에니메이션 처리 이미지 변경시 깜빡임 현상 있음 */
+.calender_ly {
+	-webkit-animation-name: bgchange;
+	-webkit-animation-duration: 7s;
+	-webkit-animation-iteration-count: 2;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+}
+@-webkit-keyframes bgchange {
+	0% {
+		background-image: url('https://img.29cm.co.kr/next29cm/event/calendar/201905/03_2.jpg');
+	}
+	50% {
+		background-image: url('https://img.29cm.co.kr/next29cm/event/calendar/201905/06_2.jpg');
+	}
+	100% {
+		background-image: url('https://img.29cm.co.kr/next29cm/event/calendar/201905/08_4.jpg');
+	}
+}
