@@ -16,7 +16,16 @@ node {
     sh 'yarn install'
   }
   stage ('build') {
-  sh 'yarn build'
+    sh 'yarn build'
+  }
+  stage ('upload') {
+    dir ('dist') {
+      pwd();
+      withAWS(region: 'ap-northeast-2', credentials: '726a3bed-0458-4929-891c-2d7e3425add5') {
+        def identity=awsIdentity();
+        s3Upload(bucket: 'slowslipper.com', workingDir:'dist', includePathPattern:'**/*');
+      }
+    }
   }
 }
 
