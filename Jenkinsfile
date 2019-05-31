@@ -12,6 +12,10 @@ node {
       print(hello)
     }
   }
+  stage ('install') {
+    sh 'yarn install'
+    sh 'yarn build'
+  }
 }
 
 void print(message) {
