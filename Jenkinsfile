@@ -5,6 +5,7 @@ node {
   }
   dir ('sample') {
     stage ('sample/execute') {
+      sh 'whoami'
       sh './execute.sh'
     }
     stage ('print') {
