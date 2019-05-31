@@ -13,8 +13,10 @@ node {
     }
   }
   stage ('install') {
-    sh 'yarn install'
     sh 'yarn build'
+  }
+  stage ('build') {
+    sh 'yarn install'
   }
 }
 
